@@ -52,5 +52,31 @@ objetoNombre.methodoNombre();
 
 //si accede a la propiedad fullName sin () , devuelve la definicion de la función:
 
-document.getElementById("demo2").innerHTML = persona.fullName; //devuelve la definicion de la funcion
+document.getElementById("demo2").innerHTML = persona.fullName;
+
+//-------------------------------------------------------
+
+
+//AGREGAR UN METODO
+
+persona.saludo = function () {
+    return this.fullName() + " como estas? Bienvenido";
+};
+
+//mostrar datos
+
+document.getElementById("demo3").innerHTML = "Hola " + persona.saludo();
+
+
+//-------------------------------------------------------
+
+
+//USO DE METODOS DE JAVASCRIPT
+//-- Este ejemplo utiliza el toUpperCase()método JavaScript para convertir un texto a mayúsculas:
+persona.yoSoy = function(){
+    return (this.fullName()).toUpperCase();
+}
+
+//mostrar datos
+document.getElementById("demo4").innerHTML = "yo soy " + persona.yoSoy();
 
